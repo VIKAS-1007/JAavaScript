@@ -1,16 +1,36 @@
-let arr1=["one","two","three","four"];
-console.log(arr1);
+function a(){
+this.name="vikas";
+};
 
+let b=new a();
 
-arr1.unshift(111,23,535);
-console.log(arr1);
+console.log(a.__proto__===a.prototype);
+console.log(a.__proto__.__proto__===Object.prototype);
+console.log(Function.__proto__===Function.prototype);
+console.log(Function.__proto__===Function.constructor);
+console.log(Function.__proto__);
+console.log(Function.prototype);
+console.log(Function.constructor);
+console.log(`
 
-let marvelHeroes=["Ironman","spiderman","hulk"];
-let dcHeroes=["batman","superman","wonderwoman"];
-let ufc=["gsp","connor","duBronx"];
+`);
 
-let a="34";
-console.log(Array.from(a));
+console.log(Object.__proto__);
+console.log(Object.prototype);
+console.log(Object.constructor);
 
+console.log(`
 
-console.log(Array.of(23,24,null,undefined))
+`);
+
+console.log(a.__proto__);
+console.log(a.prototype);
+console.log(a.constructor);
+
+console.log(`
+`);
+
+console.log(b.__proto__);
+console.log(b.prototype);
+console.log(b.constructor);
+
