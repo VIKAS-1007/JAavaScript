@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <input id="title" type="text" placeholder="title" />
+    <br /><br />
+    <input id="description" type="text" placeholder="description" />
+    <br /><br />
+    <button id="first-button" onclick="addTodo()">Add todo</button>
+    <div id="container"></div>
+    <!-- let's fucking go -->
+    <!-- <script>
+      function createChild(title, description, id, iscomplete) {
+        const child = document.createElement("div");
+        child.setAttribute("id", `${id}`);
+
+        const grandChildOne = document.createElement("div");
+        grandChildOne.innerHTML = title;
+
+        const grandChildTwo = document.createElement("div");
+        grandChildTwo.innerHTML = description;
+
+        const grandChildThree = document.createElement("button");
+        if (iscomplete) {
+          grandChildThree.innerHTML = "Done !";
+        } else {
+          grandChildThree.innerHTML = "Not completed";
+        }
+
+        child.appendChild(grandChildOne);
+        child.appendChild(grandChildTwo);
+        child.appendChild(grandChildThree);
+        return child;
+      }
+
+      function updateDomAccToState(state) {
+        const container = document.getElementById("container");
+        container.innerHTML = "";
+        for (let i = 0; i < state.length; i++) {
+          container.appendChild(
+            createChild(
+              state[i].title,
+              state[i].description,
+              state[i].id,
+              state[i].completed
+            )
+          );
+        }
+      }
+
+      setInterval(async function () {
+        let response = await fetch("https://sum-server.100xdevs.com/todos");
+        let data = await response.json();
+        console.log(data);
+        updateDomAccToState(data.todos);
+      }, 5000);
+    </script> -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
