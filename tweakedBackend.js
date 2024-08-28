@@ -104,7 +104,7 @@ app.get("/getData", (req, res) => {
 
   //   console.log(magic);
   res.json({
-    data: db[magic],
+    todos: db[magic],
   });
 });
 
